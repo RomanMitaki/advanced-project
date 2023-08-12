@@ -1,0 +1,20 @@
+{
+  "name": "advanced-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanMitaki/advanced-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanMitaki/advanced-project/issues"
+  },
+  "homepage": "https://github.com/RomanMitaki/advanced-project#readme"
+}
