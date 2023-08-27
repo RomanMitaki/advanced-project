@@ -16,7 +16,8 @@ module.exports = {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking'
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:i18next/recommended'
       ],
       parserOptions: {
         project: ['./tsconfig.json']
@@ -28,7 +29,9 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    '@typescript-eslint',
+    'i18next'
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -36,6 +39,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/ban-ts-comment': 1,
-    '@typescript-eslint/no-floating-promises': 1
+    '@typescript-eslint/no-floating-promises': 1,
+    'i18next/no-literal-string': ['error', {markupOnly: true}]
   }
 }
