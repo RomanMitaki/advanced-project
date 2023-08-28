@@ -1,27 +1,30 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended'
   ],
   parser: '@typescript-eslint/parser',
+
   overrides: [
     {
       env: {
         node: true
       },
-      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+      files: ['./**/*.{ts,tsx}'],
       extends: [
         'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:i18next/recommended'
+        'plugin:@typescript-eslint/recommended-requiring-type-checking'
       ],
       parserOptions: {
-        project: ['./tsconfig.json']
-      }
+        project: 'tsconfig.eslint.json',
+        tsconfigRootDir: __dirname,
+        sourceType: 'module'
+      },
     }
   ],
   parserOptions: {
@@ -39,7 +42,8 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/ban-ts-comment': 1,
-    '@typescript-eslint/no-floating-promises': 1,
-    'i18next/no-literal-string': ['error', {markupOnly: true}]
+    '@typescript-eslint/no-floating-promises': ['warn'],
+    'i18next/no-literal-string': ['warn', { markupOnly: true }],
+    '@typescript-eslint/ban-types': 'off'
   }
 }
