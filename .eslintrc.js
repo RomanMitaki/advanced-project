@@ -44,6 +44,6 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 1,
     '@typescript-eslint/no-floating-promises': ['warn'],
     'i18next/no-literal-string': ['warn', { markupOnly: true }],
-    '@typescript-eslint/ban-types': 'off'
-  }
+    '@typescript-eslint/ban-types': 'off',
+      }
 }
