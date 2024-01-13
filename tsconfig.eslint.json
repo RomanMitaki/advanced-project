@@ -13,6 +13,7 @@
     "tsconfig.json",
     "package.json",
     "babel.config.json",
-    ".stylelintrc.json"
+    ".stylelintrc.json",
+    "./config/jest/setupTests.ts"
   ]
 }
