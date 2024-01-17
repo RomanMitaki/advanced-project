@@ -1,17 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
 import { Button, ThemeButton } from './Button'
+import { ThemeDecoratorDark } from 'shared/config/storybook/ThemeDecorator/ThemeDecoratorDark'
 
 const meta = {
   title: 'shared/Button',
-  component: Button,
-  argTypes: {
-    // backgroundColor: { control: 'color' }
-  }
+  component: Button
 } satisfies Meta<typeof Button>
 
 export default meta
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
   args: {
@@ -32,3 +29,4 @@ export const Outline: Story = {
     theme: ThemeButton.OUTLINE
   }
 }
+Outline.decorators = [ThemeDecoratorDark]

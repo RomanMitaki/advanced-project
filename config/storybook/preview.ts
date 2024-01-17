@@ -1,4 +1,7 @@
 import type { Preview } from '@storybook/react'
+import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator'
+import { ThemeDecoratorLight } from 'shared/config/storybook/ThemeDecorator/ThemeDecoratorLight'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
 
 const preview: Preview = {
   parameters: {
@@ -9,7 +12,8 @@ const preview: Preview = {
         date: /Date$/i
       }
     }
-  }
+  },
+  decorators: [StyleDecorator, ThemeDecoratorLight, RouterDecorator]
 }
 
 export default preview
