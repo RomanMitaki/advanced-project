@@ -5,6 +5,7 @@
 # Tests
 /coverage
 /.nyc_output
+/storybook-static
 
 # IDEs and editors
 .idea
