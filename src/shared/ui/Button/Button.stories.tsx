@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonTheme } from './Button'
+import { Button, ButtonSize, ButtonTheme } from './Button'
 import { ThemeDecoratorDark } from 'shared/config/storybook/ThemeDecorator/ThemeDecoratorDark'
 
 const meta = {
@@ -30,3 +30,43 @@ export const Outline: Story = {
   }
 }
 Outline.decorators = [ThemeDecoratorDark]
+
+export const BackgroundTheme: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND
+  }
+}
+
+export const BackgroundInverted: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND_INVERTED
+  }
+}
+
+export const Square: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true
+  }
+}
+
+export const SquareL: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L
+  }
+}
+
+export const SquareXL: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL
+  }
+}
