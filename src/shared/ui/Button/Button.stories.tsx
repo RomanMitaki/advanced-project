@@ -29,7 +29,25 @@ export const Outline: Story = {
     theme: ButtonTheme.OUTLINE
   }
 }
+
+export const OutlineSizeL: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.L
+  }
+}
+
+export const OutlineSizeXL: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.XL
+  }
+}
 Outline.decorators = [ThemeDecoratorDark]
+OutlineSizeL.decorators = [ThemeDecoratorDark]
+OutlineSizeXL.decorators = [ThemeDecoratorDark]
 
 export const BackgroundTheme: Story = {
   args: {
