@@ -7,6 +7,8 @@ import { Button, ButtonSize, ButtonTheme } from '../../../../shared/ui/Button/Bu
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { useTranslation } from 'react-i18next'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import AboutIcon from 'shared/assets/icons/about.svg'
+import MainIcon from 'shared/assets/icons/main.svg'
 
 interface SidebarProps {
   className?: string
@@ -36,14 +38,22 @@ export const Sidebar = ({ className = '' }: SidebarProps) => {
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.main}
-                    className={classNames(cls.link)}
-                >{t('Главная')}
+                    className={cls.item}
+                >
+                    <MainIcon className={cls.icon}/>
+                    <span className={cls.link}>
+                            {t('Главная')}
+                    </span>
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.about}
-                    className={classNames(cls.link)}
-                >{t('О сайте')}
+                    className={cls.item}
+                >
+                    <AboutIcon className={cls.icon}/>
+                    <span className={cls.link}>
+                            {t('О сайте')}
+                    </span>
                 </AppLink>
             </div>
             <div className={cls.switchers}>
