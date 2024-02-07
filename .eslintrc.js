@@ -31,7 +31,8 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'i18next'
+    'i18next',
+    "react-hooks"
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -42,5 +43,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': ['warn'],
     'i18next/no-literal-string': ['warn', { markupOnly: true }],
     '@typescript-eslint/ban-types': 'off',
-      }
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
+  }
 }

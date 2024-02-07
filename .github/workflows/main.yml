@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 16.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -32,9 +32,6 @@ jobs:
         if: always()
       - name: build storybook
         run: npm run build-storybook
-        if: always()
-      - name: update tests
-        run: npx loki update
         if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
